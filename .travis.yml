@@ -4,6 +4,7 @@ dotnet: 2.0.0
 dist: trusty
 solution: new.sln
 before_script:
+  - ls
   - cd webapi
 script:
   - dotnet restore && dotnet run
