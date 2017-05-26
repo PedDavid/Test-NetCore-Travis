@@ -3,14 +3,20 @@ os:
   - osx
 matrix:
   include:
-  - language: csharp
+  - os:
+    - linux
+    - osx
+    language: csharp
     mono: none
     dotnet: 1.0.1
     dist: trusty
     solution: new.sln
     script:
     - cd webapi && ulimit -n 2048; dotnet restore && dotnet build
-  - language: node_js
+  - os:
+    - linux
+    - osx
+    language: node_js
     node_js:
     - node
     before_install: cd client
@@ -19,4 +25,4 @@ matrix:
     - export PATH=$HOME/.yarn/bin:$PATH
     before_script: yarn
     script:
-    - yarn test:coverage
+    - yarn test
