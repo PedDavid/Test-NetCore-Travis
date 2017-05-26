@@ -7,4 +7,4 @@ dotnet: 1.0.1
 dist: trusty
 solution: new.sln
 script:
-  - cd webapi && dotnet restore && dotnet build
+  - cd webapi && ulimit -n 2048; dotnet restore && dotnet build
