@@ -3,7 +3,10 @@ os:
   - osx
 matrix:
   include:
-  - language: node_js
+  - os:
+      - linux
+      - osx
+    language: node_js
     node_js:
     - node
     before_install: cd client
@@ -13,6 +16,10 @@ matrix:
     before_script: yarn
     script:
     - yarn test
+    cache:
+      yarn: true
+      directories:
+       - node_modules
 language: csharp
 mono: none
 dotnet: 1.0.1
