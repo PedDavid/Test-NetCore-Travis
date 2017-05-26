@@ -3,5 +3,7 @@ mono: none
 dotnet: 2.0.0
 dist: trusty
 solution: new.sln
+before_script:
+  - cd webapi
 script:
-  - cd webapi && dotnet restore && dotnet run
+  - dotnet restore && dotnet run
