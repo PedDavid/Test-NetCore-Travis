@@ -5,5 +5,5 @@ dist: trusty
 solution: new.sln
 script:
   - ls
-  - cd webapi/
+  - cd webapi
   - dotnet restore && dotnet run
