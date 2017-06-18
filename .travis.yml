@@ -1,11 +1,11 @@
-os:
-- linux
-- osx
 matrix:
   include:
   - language: node_js
     node_js:
     - node
+    os:
+    - linux
+    - osx
     before_install: cd client
     install:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -20,6 +20,9 @@ matrix:
   - language: csharp
     mono: none
     dotnet: 1.0.1
+    os:
+    - linux
+    - osx
     dist: trusty
     solution: new.sln
     script:
