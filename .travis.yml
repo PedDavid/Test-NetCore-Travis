@@ -23,4 +23,5 @@ matrix:
     dist: trusty
     solution: new.sln
     script:
-    - cd webapi && ulimit -n 2048; dotnet restore && dotnet build
+    - dotnet restore webapi
+    - dotnet build webapi
