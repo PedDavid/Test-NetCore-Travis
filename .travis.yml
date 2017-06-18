@@ -14,10 +14,10 @@ matrix:
       yarn: true
       directories:
        - client/node_modules
-language: csharp
-mono: none
-dotnet: 1.0.1
-dist: trusty
-solution: new.sln
-script:
-- cd webapi && ulimit -n 2048; dotnet restore && dotnet build
+  - language: csharp
+    mono: none
+    dotnet: 1.0.1
+    dist: trusty
+    solution: new.sln
+    script:
+    - cd webapi && ulimit -n 2048; dotnet restore && dotnet build
