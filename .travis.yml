@@ -3,9 +3,7 @@ matrix:
   - language: node_js
     node_js:
     - node
-    os:
-    - linux
-    - osx
+    os: osx
     before_install: cd client
     install:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
